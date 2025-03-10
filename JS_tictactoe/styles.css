@@ -1,0 +1,76 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #d0fef5;
+}
+#gameboard{
+    width: 300px;
+    height: 300px;
+    background-color:#52ffb8;
+    display:flex;
+    flex-wrap: wrap;
+    border: solid 1px black;
+    
+}
+
+#info{
+    color:#4A051C;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-large;
+}
+.title{
+    color:black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-large;
+    background-color: #FAB2EA;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(199, 255, 227);
+    border: solid #4A051C 2px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 15px solid blue;
+    box-sizing: border-box;
+}
+
+.cross{
+    height: 90px;
+    width: 90px;
+    position: relative; /* Add this line */
+}
+.cross:before, .cross:after{
+    content: "";
+    position: absolute;
+    background-color: red;
+    transform: rotate(45deg);
+}
+.cross:before{
+    left: 50%;
+    width: 30%;
+    height: 100%;
+    margin-left: -15%;
+}
+.cross:after{
+    top: 50%;
+    height: 30%;
+    width: 100%;
+    margin-top: -15%;
+}
